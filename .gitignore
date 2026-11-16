@@ -1,0 +1,8 @@
+# Third-party material kept locally but not published: Nextion's drawings and schematic,
+# shop listing images, and the factory firmware image read from the device.
+vendor/
+# Build output
+firmware/onx_showcase/build/
+firmware/onx_showcase/sim/sim
+.DS_Store
+.claude/
