@@ -1,6 +1,6 @@
 # One-piece desk robot for the ONX2424G013
 
-The round knob display is the robot's face. The robot is a single solid print: it sits with its legs forward and its hands on the desk, and nothing moves or needs assembling. **Status: printed once**, on 2026-11-12, on a Creality K1 Max in red PLA. The print completed cleanly. How the plate and display fit has not been recorded yet. The demo firmware that gives it a face is in [`../../firmware/`](../../firmware/).
+The round knob display is the robot's face. The robot is a single solid print: it sits with its legs forward and its hands on the desk, and nothing moves or needs assembling. **Status: printed once**, on 2026-11-12, on a Creality K1 Max in red PLA. The print completed cleanly, **the plate fits the display and the knob presses fine** (reported by the owner on 2026-11-17, with the default settings). The demo firmware that gives it a face is in [`../../firmware/`](../../firmware/).
 
 ![front](preview_front.png)
 
@@ -69,7 +69,7 @@ A flat base, 68 x 82 x 6.5 mm, that stays on the desk while the robot comes and 
 ![on the seat](preview_on_seat.png)
 
 ## If something does not fit
-Everything I could not measure lands on the plate, which reprints in minutes.
+On the first print nothing needed changing. If your display or printer differs: everything that could not be measured lands on the plate, which reprints in minutes.
 1. **Holes mirrored.** If the plate's three holes are a mirror image of the display's, set `flip_pattern = true` and reprint the plate. Nothing else changes, because the USB-C sits on the robot's centre line.
 2. **Knob bottoms out on the rim when pressed.** The gap is 1.5 mm (`press_gap`). Raise `plate_t` by the missing amount and reprint the plate: a thicker plate lifts the display.
 
@@ -89,6 +89,7 @@ Everything I could not measure lands on the plate, which reprints in minutes.
 | Overhang scan | see "Printing" |
 
 ## Still assumptions
-- Hole pattern and connector positions come from Nextion's drawing only.
-- The knob's push travel and the display's weight are not published.
-- The first print finished on 2026-11-12, but the fit of the plate on the display is not confirmed.
+- The display's weight is not published, so the tipping figures are calculated.
+- The desk seat has not been printed.
+
+Confirmed on the first print (2026-11-12, reported 2026-11-17): the hole pattern is right with `flip_pattern = false`, and the knob presses freely with `plate_t = 3.2`.

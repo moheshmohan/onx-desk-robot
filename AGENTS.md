@@ -32,9 +32,9 @@ Not in the repository (kept in the owner's local `vendor/` folder, ignored by gi
 
 1. **`docs/PROJECT_LOG.md` is the source of facts.** Every number there is tagged measured, from the maker, calculated, reported or unknown. Keep those tags when you reuse a number. A calculated print time is not a print time.
 2. **Do not invent results, footage or quotes.** The owner's quotes in `docs/VIDEO_BRIEF.md` are verbatim. If you need something that is listed as unknown, ask the owner.
-3. **Say what was and was not printed.** Only the one-piece robot was printed, once, on 12 November 2026. Whether the display fits it is still an open question.
+3. **Say what was and was not printed.** Only the one-piece robot was printed, once, on 12 November 2026. The owner reported on 17 November that the plate fits the display and the knob presses fine. The other four designs have never been printed.
 4. **Simulator renders are not photos.** `docs/media/scene_*` come from the firmware's drawing code run on a computer. Label them as rendered or simulated.
-5. **There are no photos or videos of the real robot or screen in this repository yet.** The only real images are the printer camera frames and slicer screenshots in `docs/media/print/`.
+5. **The owner has detailed video clips of the finished robot with everything working.** They are not in this repository; he will provide them to the session doing the video. Until you have them, the only real images are the printer camera frames and slicer screenshots in `docs/media/print/`. Describe only what you can see in a clip, and add any new fact it shows to `docs/PROJECT_LOG.md`.
 6. **When an open question gets answered, write it down:** `docs/PROJECT_LOG.md` first, then the README of the design concerned, then the article.
 7. **Privacy.** Never publish the owner's email address, network addresses, printer host name or account names. The app screenshots have the printer's name and address painted over; keep that in any re-crop. Commits use the owner's GitHub no-reply address.
 
@@ -88,4 +88,4 @@ Useful if you are working on the owner's own computer; ignore otherwise.
 
 ## Open questions
 
-Kept in `docs/PROJECT_LOG.md`. The first two matter most: does the plate fit the display, and does the knob press freely in the head?
+Kept in `docs/PROJECT_LOG.md`. The two that mattered most are answered: the plate fits and the knob presses freely. What remains is detail the owner's clips should show (colours, direction, surface finish).

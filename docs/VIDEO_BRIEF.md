@@ -2,7 +2,9 @@
 
 *Working notes for planning a YouTube video. Written so that another writer, editor or AI session can pick it up cold. Facts are in [PROJECT_LOG.md](PROJECT_LOG.md) and the full story is in [ARTICLE.md](ARTICLE.md); this file is about how to tell it.*
 
-**Rule for anyone using this file:** do not invent footage, quotes, measurements or results. If something is listed under "Not known yet", ask the owner or film it. The owner's quotes below are verbatim from the work sessions, typos included.
+**Status, 17 November 2026:** the owner confirms the plate fits, the knob presses fine and the demo works, and **he has detailed video clips of everything working**. Those clips are not in the repository; he will hand them to the session doing the edit.
+
+**Rule for anyone using this file:** do not invent footage, quotes, measurements or results. Describe only what a clip actually shows. If something is listed under "Not known yet", check the clips or ask the owner. The owner's quotes below are verbatim from the work sessions, typos included.
 
 ## 1. One-line pitch
 
@@ -41,8 +43,8 @@ Recommendation: A as the spine, B as the cold open, C as the mid-video twist.
 10. **Giving it a face.** Factory firmware asks for Wi-Fi. Back it up, then write a demo from scratch.
 11. **Blind graphics.** The AI cannot see the screen, so it builds a simulator and looks at that.
 12. **The twist.** *"it doesnt respond to rotations or click of the display"*. The AI blames the knob code and "fixes" it. Then: *"its stuck now"*. The real cause: a debug print waiting for a listener that was only there while the AI was watching.
-13. **Payoff.** All six scenes on the real robot. Leave it alone and it plays by itself.
-14. **Close.** What is still unverified, what comes next, where the files are.
+13. **Payoff.** All six scenes on the real robot. Leave it alone and it plays by itself. The plate fitted first time: neither of the design's escape hatches was needed.
+14. **Close.** What was never built (the stand, the posable robot), what comes next, where the files are.
 
 ## 5. Owner's quotes (verbatim)
 
@@ -56,6 +58,7 @@ Use as on-screen text. They are chat messages, lower case and unedited.
 - "it doesnt respond to rotations or click of the display"
 - "does the device have an imu to orient display"
 - "its stuck now"
+- "the plate fits and knob presses fine"
 
 ## 6. Footage and images that already exist
 
@@ -98,9 +101,9 @@ More can be made at any length and frame rate: see `firmware/onx_showcase/tools/
 
 Turntables or exploded animations can be rendered from the `.scad` files with OpenSCAD's command line (`--camera`, `-D`).
 
-## 7. Shots that still need filming
+## 7. Shot checklist
 
-Nothing below exists yet. No photo or video of the real robot or the real screen is in this repository.
+The owner has filmed detailed clips of the finished robot working. They are not in this repository, so nothing below is ticked. When you receive the clips, tick what they cover, log each clip (file name, what it shows, length) in a table here, and list what is still missing.
 
 - [ ] The display as delivered, in the hand, knob being turned and pressed.
 - [ ] Close-up of the knob overhanging the base (the reason for the main design rule).
@@ -132,6 +135,7 @@ All checked against [PROJECT_LOG.md](PROJECT_LOG.md).
 - Printer: Creality K1 Max. Filament: red Hyper PLA.
 - Parts: 1 robot + 1 plate, 3 screws.
 - Print watch: 21 checks, 11:08 to 12:28, one every 4 minutes.
+- Fit: plate and knob right on the first print, no reprint.
 - Demo: six scenes, about 1,250 lines of C++, 40 to 55 frames per second.
 - First build: 18 frames per second.
 - SPI link tested at 80 MHz: 0 errors in 256 register writes.
@@ -143,22 +147,27 @@ All checked against [PROJECT_LOG.md](PROJECT_LOG.md).
 - Do not say the AI "printed it by itself". The owner pressed Start Print, and the AI was told not to stop or pause.
 - Do not say the AI "saw" the robot or the screen. It saw a low-resolution printer camera and its own simulator.
 - Do not call simulator renders photos or screen captures of the device.
-- Do not say the fit is confirmed. See "Not known yet".
+- The fit **is** confirmed, by the owner's report: say "it fitted first time", not "we measured it".
 - Do not say the stand, puck, posable robot or seat were printed. They were not.
 - Do not say the radio works. It was never wired.
 - Do not quote the faster print time (about an hour, 39 g) as a result. It is a calculation.
 - Do not show the printer's network address or any account names.
 
-## 10. Not known yet (ask the owner)
+## 10. Known and not known
 
-- Did the plate's holes line up with the display, or was `flip_pattern` needed?
-- Does the knob press freely in the head, or did it bottom out on the rim?
-- Is the picture upright, or how many quarter turns did it take?
-- Are the colours right on the real screen? Does clockwise count up?
-- Any visible tearing in fast motion?
-- How does the surface look, especially under the head?
-- Were magnets and rubber feet fitted?
-- Does it slide when pressed?
+Confirmed by the owner on 17 November 2026:
+
+- The plate's holes line up with the display as printed. `flip_pattern` was not needed.
+- The knob presses fine in the head.
+- The demo works as expected on the real display.
+
+Not known yet (look in the clips, or ask):
+
+- How many quarter turns it took to get the picture upright.
+- Colours on camera, and that clockwise counts up.
+- Any visible tearing in fast motion.
+- How the surface looks, especially under the head.
+- Whether magnets and rubber feet were fitted, and whether it slides when pressed.
 
 ## 11. Title and thumbnail ideas
 

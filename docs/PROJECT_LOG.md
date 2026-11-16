@@ -7,7 +7,7 @@ Each fact is tagged with how it is known:
 - **measured**: read from the device, the slicer or the printer.
 - **from the maker**: Nextion's drawing, schematic or published configuration.
 - **calculated**: worked out in CAD or by arithmetic. Not tested.
-- **reported**: said by the owner.
+- **reported**: said by the owner. The assistant has not seen it.
 - **unknown**: nobody has checked.
 
 ## Timeline
@@ -27,6 +27,7 @@ Dates before November come from file dates, so treat them as approximate.
 | 12 Nov, 11:08 to 12:28 | 21 camera checks, four minutes apart. No faults seen. Print complete at the last check |
 | 15 Nov | Factory firmware backed up. Showcase firmware written, flashed and optimised. Two freezes reported and traced to one bug |
 | 16 Nov | Repository organised and published |
+| 17 Nov | Owner reports: the plate fits, the knob presses fine, and he has filmed detailed clips of everything working |
 
 Times on 12 November are local (UTC+4).
 
@@ -94,7 +95,7 @@ One-piece robot, calculated and not tested:
 | Watch | 21 camera checks, 11:08 to 12:28, every 4 minutes | measured |
 | Outcome | Complete. No shifting or stringing seen on camera | measured, at camera quality |
 | Surface quality | | unknown |
-| Fit of plate and display | | unknown |
+| Fit of plate and display | The plate fits the display and the knob presses fine in the head, as printed (`flip_pattern = false`, `plate_t = 3.2`) | reported, 17 Nov |
 
 Things that went wrong around the print:
 
@@ -113,8 +114,7 @@ Things that went wrong around the print:
 | Frame rate | First build 18 fps. After moving the frame buffer to internal RAM, 43. Final: Hello 49 to 56, Climate 48, Sound 45, Time 43 to 51, Colour 43 to 49, Warp 42 to 46. About 40 during a wipe | measured |
 | Knob and button | Sampled 1,000 times a second | |
 | Input works | Turns and presses seen in the log moving through all six scenes | measured |
-| Colours, orientation, direction | | unknown |
-| Tearing | | unknown |
+| Demo on the real display | "everything working as expected", with video clips | reported, 17 Nov. Colours, direction and tearing were not reported one by one |
 
 The freeze, for the record:
 
@@ -127,14 +127,22 @@ The freeze, for the record:
 
 The interrupt-based input was probably fine. It was never retested.
 
+## Answered
+
+- **Does the plate's hole pattern match the display?** Yes. The plate fits as printed, with `flip_pattern = false`. So the mirroring of Nextion's back-view drawing in the robot model is right. (reported, 17 Nov)
+- **Does the knob press freely in the pocket?** Yes, with the default `plate_t = 3.2` and `press_gap = 1.5`. (reported, 17 Nov)
+- **Does the demo work on the real display?** Yes, "everything working as expected". (reported, 17 Nov)
+
+The stand and the panel puck use the same drawing through their own mirror switch (`mirror_fix`), but neither has been printed, so their fit is still untested.
+
 ## Open questions
 
-1. Does the plate's hole pattern match the display, or is `flip_pattern = true` needed?
-2. Does the knob press freely in the pocket, or should `plate_t` go up?
-3. Colours, upright orientation and clockwise direction on the real screen.
-4. Visible tearing?
-5. Does the desk seat clip as designed?
-6. Does restoring the factory firmware work?
-7. Does the CC1101 wiring work?
+1. Colours, clockwise direction and tearing on the real screen have not been reported individually. The owner's clips will show them.
+2. How many quarter turns the picture needed to be upright in the robot.
+3. Surface quality of the print, especially under the head.
+4. Were magnets and rubber feet fitted, and does the robot slide when pressed?
+5. Does the desk seat clip as designed? (never printed)
+6. Does restoring the factory firmware work? (never run)
+7. Does the CC1101 wiring work? (never powered)
 
 When one of these is answered, update this file, then the README of the design concerned.

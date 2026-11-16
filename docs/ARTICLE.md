@@ -1,6 +1,6 @@
 # A desk robot for a round knob display: design, print and demo software
 
-*Full write-up of the project, written as source material for an article. Every number here was either measured, sliced or calculated; each is marked where it matters. Things nobody has checked yet are listed in "What is still unverified" near the end.*
+*Full write-up of the project, written as source material for an article. Every number here was either measured, sliced or calculated; each is marked where it matters. What is confirmed on the real parts, and what is not, is listed in section 6.*
 
 ![The six demo scenes](media/all_scenes.png)
 
@@ -105,12 +105,14 @@ Only the fixed base touches the print. The pocket rim stops 1.5 mm below the kno
 
 ### 3.2 Everything risky lands on the plate
 
-Two measurements could not be verified: whether the hole pattern is mirrored correctly, and how far the knob travels when pressed. Both are settled by the plate.
+Two measurements could not be verified before printing: whether the hole pattern is mirrored correctly, and how far the knob travels when pressed. Both were put on the plate.
 
 - Holes mirrored? Set `flip_pattern = true` and reprint the plate. The USB-C socket sits on the robot's centre line, so nothing else moves.
 - Knob bottoms out on the rim? Raise `plate_t`. A thicker plate lifts the display.
 
 The plate takes minutes to print. The robot never needs reprinting for either problem.
+
+In the end neither switch was needed. The first plate fitted the display and the knob presses freely.
 
 ### 3.3 The cable
 
@@ -284,11 +286,20 @@ The fix is small: a log line is sent only if all of it fits in the buffer at tha
 
 The first explanation given to the owner was wrong, and the correction went to him as plainly as the fix.
 
-## 6. What is still unverified
+## 6. Did it work?
 
-- **Whether the mount plate fits the display.** The print finished cleanly, but the hole pattern and the knob's push travel against the real module have not been reported. The plate is designed to absorb both.
-- **Colours, orientation and knob direction on the real screen.** The owner used the demo and stepped through all six scenes; nobody has written down whether cyan is cyan and clockwise counts up. A one-line setting (`ENC_DIR`) flips the direction.
-- **Tearing.** Not checked by eye.
+Yes. The owner's report on 17 November:
+
+- **The plate fits the display.** The three holes lined up as printed, so the mirroring of Nextion's back-view drawing was right the second time.
+- **The knob presses fine** in the head, with the 1.5 mm gap that was a guess.
+- **The demo works as expected** on the real display. He has filmed it in detail.
+
+Neither of the plate's escape hatches (`flip_pattern`, `plate_t`) was needed.
+
+What is still unverified:
+
+- **Colours, knob direction and tearing** have not been reported one by one; the video clips will show them. A one-line setting (`ENC_DIR`) flips the direction.
+- **Surface quality** of the print was never judged from the printer's camera.
 - **The stand, the puck, the posable robot and the desk seat** have never been printed.
 - **The CC1101 radio wiring** has never been powered.
 - **Restoring the factory firmware** from the backup has never been run.

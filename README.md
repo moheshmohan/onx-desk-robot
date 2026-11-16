@@ -34,7 +34,7 @@ Every design is one OpenSCAD file with ready-made STLs beside it.
 
 Details, hardware list and what to do if something does not fit: [`designs/robot-onepiece/README.md`](designs/robot-onepiece/README.md).
 
-**Not yet confirmed:** the fit of the plate on the real display. The hole pattern comes from Nextion's drawing. If it turns out mirrored, set `flip_pattern = true` and reprint only the plate.
+**It fits.** On the first print the plate matched the display's holes and the knob presses freely, with the default settings. If yours differs, the plate is the only part to reprint: see the design's README.
 
 ## Flash the demo
 
@@ -60,7 +60,7 @@ The first command saves the firmware the display shipped with. The second builds
 - [`docs/VIDEO_BRIEF.md`](docs/VIDEO_BRIEF.md): planning notes for a video.
 - [`AGENTS.md`](AGENTS.md): notes for AI assistants working in this repository.
 
-This project was built with an AI coding assistant (Claude Code), which wrote the CAD and firmware, ran the slicer and watched the print. It never saw the real parts or the real screen. The images of the demo in this repository are rendered by a simulator from the firmware's own code; the only real images are the slicer screenshots and printer camera frames in `docs/media/print/`.
+This project was built with an AI coding assistant (Claude Code), which wrote the CAD and firmware, ran the slicer and watched the print. It never saw the real parts or the real screen. The images of the demo in this repository are rendered by a simulator from the firmware's own code; the only real images here so far are the slicer screenshots and printer camera frames in `docs/media/print/`. Video of the finished robot exists but is not in this repository yet.
 
 ## Not included
 

@@ -36,7 +36,7 @@ No 3.3 V is brought out on any connector.
 ## Knob
 
 - One click is one quadrature transition, so the knob rests in all four states of the cycle.
-- Which direction counts up has not been confirmed on this unit. `ENC_DIR` in the firmware flips it.
+- The owner reports the demo works as expected; which way counts up was not reported separately. `ENC_DIR` in the firmware flips it.
 - The push switch is under the display: pressing the whole knob presses it.
 
 ## Memory
@@ -54,7 +54,7 @@ From Nextion's dimension drawing, which is a **back view**.
 - USB-C centre at (-11.0, 0) in the same view.
 - Connectors stick out about 2.6 mm behind the back plane.
 
-A part that mates with the back must use the mirror image of these positions.
+A part that mates with the back must use the mirror image of these positions. The robot's mount plate, made that way, fits the real display.
 
 ## Flashing
 
