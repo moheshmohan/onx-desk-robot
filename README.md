@@ -12,6 +12,13 @@ The one that got built is a one-piece robot: the display is its face, it prints 
 
 *The print on 12 November 2026: 21 looks through the printer's camera, four minutes apart.*
 
+## Official Nextion product links
+
+This project uses the **Open Nextion ONX2424G013**, the 1.28-inch round ESP32-S3 knob display.
+
+- [Official product page and store listing — ONX2424G013](https://itead.cc/product/open-nextion-genius-series-1-28-esp32-s3-smart-knob-screen/)
+- [Official Nextion specifications, interfaces and resources — ONX2424G013](https://open-nextion-app-store.nextion.tech/devices/onx2424g013/)
+
 ## What is here
 
 | Folder | What it is | Printed? |
